@@ -1,0 +1,21 @@
+#include<stdio.h>
+main ()
+{
+float i,j,a,b,l;
+float m[100],q[100];
+int	n,p,s;
+scanf("%f%f%f",&i,&j,&l);
+m[0]=i;
+m[1]=j;
+q[0]=l;
+for(n=2,p=97,s=1;n<20;s++,n++,p++)
+{
+a=(1.209374)*m[n-1];
+b=(-0.441391)*m[n-2];
+m[n]=a+b;
+//	 printf("%f %f ",a,b);
+q[s]=q[s-1]+m[s];
+printf("第%4d个数：%f 预测值：%f\n",p,m[n],q[s]);
+}
+
+} 
